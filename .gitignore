@@ -1,2 +1,4 @@
 *.add
 *.add.spl
+
+fish_variables
