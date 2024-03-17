@@ -4,6 +4,7 @@ if status is-interactive
         set fish_greeting
         set -U fish_user_paths ~/.local/bin $fish_user_paths
 
+        fish_vi_key_bindings
         starship init fish | source 
 
         set -U FZF_DISABLE_KEYBINDINGS 1
