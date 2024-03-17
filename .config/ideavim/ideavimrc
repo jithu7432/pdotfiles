@@ -1,0 +1,54 @@
+set clipboard+=unnamed
+set clipboard+=unnamedplus
+set encoding=utf-8
+set guicursor=
+set hidden
+set highlightedyank
+set ignorecase
+set incsearch
+set multiple-cursors
+set nobackup
+set noerrorbells
+set nohlsearch
+set noshowmode
+set noswapfile
+set nowrap
+set number
+set relativenumber
+set scrolloff=3
+set signcolumn=yes
+set smartcase
+set updatetime=50
+set visualbell
+set NERDTree
+
+let mapleader = "\\"
+nmap <leader><leader> <Action>(IdeaVim.ReloadVimRc.reload)
+
+" yank color
+let g:highlightedyank_highlight_color = "rgba(160, 0, 0, 160)"
+
+" multi-cursors remaps
+nmap  <C-n> <Plug>NextWholeOccurrence
+xmap  <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+nmap  <C-p> <Plug>RemoveOccurrence
+xmap  <C-p> <Plug>RemoveOccurrence
+
+" Action remaps
+nmap <leader>f  <Action>(ReformatCode)
+nmap <leader>x  <Action>(RerunFailedTests)
+vmap <leader>f  <Action>(ReformatCode)
+nmap <leader>c  <Action>(Run)
+nmap <leader>d  <Action>(Debug)
+nmap <leader>an <Action>(Annotate)
+nmap <leader>rn <Action>(RenameElement)
+vmap J          <Action>(MoveLineDown)
+vmap K          <Action>(MoveLineUp)
+nmap K          <Action>(QuickJavaDoc)
+nmap gi         <Action>(GotoImplementation)
+nmap J          <Action>(NextTab)
+nmap <C-j>      <Action>(HideActiveWindow)
+nmap gn         <Action>(GotoNextError)
+nmap gp         <Action>(GotoPreviousError)
