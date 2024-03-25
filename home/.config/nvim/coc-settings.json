@@ -18,13 +18,21 @@
                 ".hg/"
             ]
         },
+        "Lua.diagnostics.globals": [
+            "vim"
+        ],
         "lua": {
-            "command": "lua",
+            "command": "/usr/bin/lua-language-server",
             "filetypes": [
                 "lua"
             ],
             "settings": {
                 "Lua": {
+                    "workspace.library": {
+                        "/usr/share/nvim/runtime/lua": true,
+                        "/usr/share/nvim/runtime/lua/vim": true,
+                        "/usr/share/nvim/runtime/lua/vim/lsp": true
+                    },
                     "diagnostics": {
                         "globals": [
                             "vim"
