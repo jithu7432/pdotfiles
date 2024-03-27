@@ -6,21 +6,6 @@
                 "py"
             ]
         },
-        "csharp-ls": {
-            "command": "csharp-ls",
-            "filetypes": [
-                "cs"
-            ],
-            "rootPatterns": [
-                "*.csproj",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ]
-        },
-        "Lua.diagnostics.globals": [
-            "vim"
-        ],
         "lua": {
             "command": "/usr/bin/lua-language-server",
             "filetypes": [
