@@ -17,7 +17,7 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         -- { name = 'vsnip' },
-        { name = 'luasnip' },
+        -- { name = 'luasnip' },
     }, {
         { name = 'buffer' },
     })
@@ -58,8 +58,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('v', '<space>ca', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
         vim.keymap.set('n', '<space>wl',
-            function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, opts)
+            function()
+                print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+            end,
+            opts)
         vim.keymap.set('n', '<leader>f',
-            function() vim.lsp.buf.format { async = true } end, opts)
+            function()
+                vim.lsp.buf.format { async = true }
+            end,
+            opts)
     end,
 })
