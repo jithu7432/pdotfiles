@@ -8,8 +8,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    { 'L3MON4D3/LuaSnip' },
     { 'airblade/vim-rooter' },
     { 'gruvbox-community/gruvbox' },
+    { 'hrsh7th/cmp-buffer' },
+    { 'hrsh7th/cmp-cmdline' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/cmp-path' },
+    { 'hrsh7th/nvim-cmp' },
     { 'jiangmiao/auto-pairs' },
     { 'junegunn/vim-easy-align' },
     { 'justinmk/vim-sneak' },
@@ -19,19 +25,12 @@ local plugins = {
     { 'nvim-treesitter/nvim-treesitter',    build = ':TSUpdate' },
     { 'preservim/nerdcommenter' },
     { 'rust-lang/rust.vim' },
+    { 'saadparwaiz1/cmp_luasnip' },
     { 'terryma/vim-multiple-cursors' },
     { 'tpope/vim-fugitive' },
     { 'vim-airline/vim-airline' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/cmp-buffer' },
-    { 'hrsh7th/cmp-path' },
-    { 'hrsh7th/cmp-cmdline' },
-    { 'hrsh7th/nvim-cmp' },
-    { 'hrsh7th/vim-vsnip' },
-    { 'hrsh7th/cmp-vsnip' },
-    { 'L3MON4D3/LuaSnip' },
-    { 'saadparwaiz1/cmp_luasnip' },
     { 'windwp/nvim-autopairs' },
+    { 'jose-elias-alvarez/null-ls.nvim' }
 }
 
 require("lazy").setup(plugins, {})
