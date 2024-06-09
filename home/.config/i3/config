@@ -152,8 +152,7 @@ default_floating_border pixel 2
 workspace_layout tabbed
 
 # night-light
-exec "xrandr --output eDP-1 --off"
-exec "redshift -P -O 2800"
+exec "redshift -P -O 3100"
 exec "feh --bg-scale ~/.local/share/wallpapers.png"
 
 # screenshot to clipboard
