@@ -58,7 +58,7 @@ text   = "#730F62"
 render_timer = false
 
 [font]
-size = 16.5
+size = 17
 
 [font.normal]
 family = "Noto Sans M Nerd Font Mono"
