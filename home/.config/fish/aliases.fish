@@ -18,5 +18,4 @@ alias vimg='vim +G'
 alias webp2gif='magick mogrify -format gif *.webp && rm *.webp'
 
 alias yy='yay -Syu --noconfirm'
-
 alias tt=tmux

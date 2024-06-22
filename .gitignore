@@ -2,3 +2,4 @@
 *.add.spl
 
 fish_variables
+lazy-lock.json

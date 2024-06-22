@@ -7,5 +7,6 @@ vim.g["NERDTrimTrailingWhitespace"] = 1
 vim.g["NERDToggleCheckAllLines"]    = 1
 
 vim.keymap.set({ "n", "v" }, "<C-/>", "<Plug>NERDCommenterToggle")
+vim.keymap.set({ "n", "v" }, "<C-_>", "<Plug>NERDCommenterToggle")
 
 vim.keymap.set({ "n", "v" }, ",omg", "<Plug>NERDCommenterComment")

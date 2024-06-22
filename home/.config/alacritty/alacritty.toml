@@ -58,10 +58,17 @@ text   = "#730F62"
 render_timer = false
 
 [font]
-size = 13.0
+size = 16.5
 
 [font.normal]
-family = "Noto Sans Mono"
+family = "Noto Sans M Nerd Font Mono"
+
+[font.bold]
+family = "Noto Sans M Nerd Font Mono"
+
+[font.italic]
+family = "Noto Sans M Nerd Font Mono"
+
 
 [window]
 decorations = "full"
