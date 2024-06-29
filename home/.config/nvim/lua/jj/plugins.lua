@@ -21,7 +21,7 @@ local plugins = {
     { 'justinmk/vim-sneak' },
     { 'lukas-reineke/indent-blankline.nvim' },
     { 'neovim/nvim-lspconfig' },
-    { 'nvim-telescope/telescope.nvim',      tag = '0.1.5',      dependencies = { 'nvim-lua/plenary.nvim' } },
+    { 'nvim-telescope/telescope.nvim',      dependencies = { 'nvim-lua/plenary.nvim' } },
     { 'nvim-treesitter/nvim-treesitter',    build = ':TSUpdate' },
     { 'preservim/nerdcommenter' },
     { 'rust-lang/rust.vim' },
@@ -30,7 +30,7 @@ local plugins = {
     { 'tpope/vim-fugitive' },
     { 'vim-airline/vim-airline' },
     { 'windwp/nvim-autopairs' },
-    { 'jose-elias-alvarez/null-ls.nvim' }
+    { 'nvimtools/none-ls.nvim' }
 }
 
 require("lazy").setup(plugins, {})
