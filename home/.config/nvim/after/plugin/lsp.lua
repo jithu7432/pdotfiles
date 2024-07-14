@@ -59,3 +59,7 @@ lsp.omnisharp
 
 lsp.tsserver
     .setup {}
+
+
+lsp.taplo
+    .setup {}

@@ -9,7 +9,7 @@ alias ll='exa -la'
 alias ls='exa'
 
 alias ccc='curl ip-api.com'
-alias leet='cd ~/code/leetcode && vim vimconfig'
+alias leet='pushd ~/code/leetcode && vim vimconfig && popd'
 alias nau='thunar'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias touchenv='echo ". .venv/bin/activate.fish" > .env'
