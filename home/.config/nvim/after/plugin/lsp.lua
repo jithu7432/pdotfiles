@@ -57,7 +57,7 @@ lsp.omnisharp
         analyze_open_documents_only = false,
     })
 
-lsp.tsserver
+lsp.ts_ls
     .setup {}
 
 

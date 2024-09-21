@@ -14,6 +14,7 @@ alias nau='thunar'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias touchenv='echo ". .venv/bin/activate.fish" > .env'
 
+alias vim=nvim
 alias vimg='vim +G'
 alias webp2gif='magick mogrify -format gif *.webp && rm *.webp'
 
