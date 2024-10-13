@@ -1,4 +1,5 @@
 vim.opt.autoindent    = true
+vim.opt.autoread      = true
 vim.opt.backup        = false
 vim.opt.clipboard     = 'unnamedplus'
 vim.opt.cmdheight     = 1
