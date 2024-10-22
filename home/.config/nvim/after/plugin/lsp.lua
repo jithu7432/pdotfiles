@@ -29,6 +29,7 @@ lsp.lua_ls
     }
 
 lsp.pylsp.setup({
+    capabilities = capabilities,
     settings = {
         pylsp = {
             plugins = {
@@ -41,7 +42,6 @@ lsp.pylsp.setup({
         },
     },
 })
-
 
 
 lsp.omnisharp
@@ -58,8 +58,16 @@ lsp.omnisharp
     })
 
 lsp.ts_ls
-    .setup {}
-
+    .setup({
+        capabilities = capabilities
+    })
 
 lsp.taplo
-    .setup {}
+    .setup({
+        capabilities = capabilities
+    })
+
+lsp.gradle_ls
+    .setup({
+        capabilities = capabilities
+    })
