@@ -30,6 +30,7 @@ local plugins = {
     { 'tpope/vim-fugitive' },
     { 'vim-airline/vim-airline' },
     { 'windwp/nvim-autopairs' },
+    { 'windwp/nvim-ts-autotag' },
     { 'nvimtools/none-ls.nvim' }
 }
 
