@@ -12,6 +12,9 @@ if status is-interactive
         set -U DOTNET_ROOT ~/.dotnet
         set -U DOTNET_CLI_TELEMETRY_OPTOUT 1
 
+        set LC_ALL en_IN.UTF-8
+        set LANG en_IN.UTF-8
+
         set PATH "$HOME/.cargo/bin/:$PATH"
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
         set PATH "$HOME/.npm/bin/:$PATH"
