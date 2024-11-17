@@ -33,11 +33,16 @@ lsp.pylsp.setup({
     settings = {
         pylsp = {
             plugins = {
-                flake8 = { enabled = true },
-                pycodestyle = { enabled = false },
+                -- lint
+                flake8 = { enabled = false, ignore = { 'E501' } },
+                -- lsp
+                pylint = { enabled = true, ignore = { 'C0411', 'C0115', 'C0116' } },
                 pyflakes = { enabled = false },
-                pylint = { enabled = false },
-                mccabe = { enabled = false },
+                pycodestyle = { enabled = false },
+                -- analzyer
+                mccabe = { enabled = true },
+                -- format
+                autopep8 = { enabled = true }
             },
         },
     },
@@ -68,6 +73,12 @@ lsp.taplo
     })
 
 lsp.gradle_ls
+    .setup({
+        capabilities = capabilities
+    })
+
+
+lsp.cssls
     .setup({
         capabilities = capabilities
     })

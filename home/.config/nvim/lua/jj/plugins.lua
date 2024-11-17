@@ -31,7 +31,8 @@ local plugins = {
     { 'vim-airline/vim-airline' },
     { 'windwp/nvim-autopairs' },
     { 'windwp/nvim-ts-autotag' },
-    { 'nvimtools/none-ls.nvim' }
+    { 'nvimtools/none-ls.nvim' },
+    { 'NStefan002/screenkey.nvim' }
 }
 
 require("lazy").setup(plugins, {})
