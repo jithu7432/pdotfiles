@@ -18,4 +18,5 @@ if status is-interactive
         set PATH "$HOME/.cargo/bin/:$PATH"
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
         set PATH "$HOME/.node/bin/:$PATH"
+        set PATH "/usr/local/go/bin:$PATH"
 end
