@@ -82,3 +82,8 @@ lsp.cssls
     .setup({
         capabilities = capabilities
     })
+
+lsp.gopls
+    .setup({
+        capabilities = capabilities
+    })
