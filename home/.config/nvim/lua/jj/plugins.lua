@@ -32,7 +32,13 @@ local plugins = {
     { 'windwp/nvim-autopairs' },
     { 'windwp/nvim-ts-autotag' },
     { 'nvimtools/none-ls.nvim' },
-    { 'NStefan002/screenkey.nvim' }
+    { 'NStefan002/screenkey.nvim' },
+    {
+        "seblyng/roslyn.nvim",
+        ft = "cs",
+        opts = {}
+    }
+
 }
 
 require("lazy").setup(plugins, {})

@@ -1,5 +1,7 @@
 if status is-interactive
         source ~/.config/fish/aliases.fish
+        
+        set -gx EDITOR /usr/bin/nvim
 
         set fish_greeting
         set -U fish_user_paths ~/.local/bin $fish_user_paths
@@ -19,4 +21,7 @@ if status is-interactive
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
         set PATH "$HOME/.node/bin/:$PATH"
         set PATH "/usr/local/go/bin:$PATH"
+
+        direnv hook fish | source
+        set -g direnv_fish_mode eval_on_arrow
 end

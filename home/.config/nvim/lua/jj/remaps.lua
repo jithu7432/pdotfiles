@@ -11,4 +11,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set({ mode = "n", noremap = true }, "<S-Tab>", "<<")
 vim.keymap.set({ mode = "i", noremap = true }, "<S-Tab>", "C-d")
-

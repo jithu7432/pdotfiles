@@ -152,8 +152,8 @@ default_floating_border pixel 2
 workspace_layout tabbed
 
 # night-light
-exec "redshift -P -O 3100"
-exec "feh --bg-scale ~/.local/share/wallpapers.png"
+# exec "redshift -P -O 3100"
+# exec "feh --bg-scale ~/.local/share/wallpapers.png"
 exec alacritty
 
 # screenshot to clipboard
