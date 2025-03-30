@@ -5,3 +5,8 @@ fish_variables
 lazy-lock.json
 
 .local/
+
+completions/
+conf.d/
+fish_plugins
+functions/
