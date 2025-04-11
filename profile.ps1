@@ -25,19 +25,19 @@ Set-Alias which where.exe
 Set-PSReadlineOption -BellStyle None
 
 # funcs
-function .. { cd .. }
-function dotent { dotnet $args }
-function ff { Invoke-FZF | cd }
+
 function l { eza -l1 $args } function la { eza -la $args } function ll { eza -la $args } function ls { eza $args }
-function mc { cd "C:\Program Files (x86)\SOTI\MobiControl" }
-function mm { cd D:/dev/XSight_Windows/ }
+
+function .. { cd .. }
+function ff { fzf | cd }
+function mm { cd E:/develop }
+
 function nau { Explorer.exe "." }
 function sol { fd -d1 -e sln | foreach { start $_ } }
+
 function vimg { vim +"G" }
 
 
 # edit cmd in $EDITOR
 Set-PSReadLineKeyHandler -Chord Alt+e -Function ViEditVisually
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-
-
