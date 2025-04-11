@@ -20,3 +20,7 @@ alias webp2gif='magick mogrify -format gif *.webp && rm *.webp'
 
 alias yy='sudo apt update -y && sudo apt upgrade -y'
 alias tt=tmux
+
+function ff
+    cd $(FZF_DEFAULT_COMMAND='fdfind -td' fzf)
+end
