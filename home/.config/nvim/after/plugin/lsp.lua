@@ -1,4 +1,4 @@
-local capabilities = require('blink.cmp').get_lsp_capabilities()
+local capabilities = require('blink.cmp').get_lsp_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lsp = require('lspconfig')
 
 lsp.digestif
@@ -60,6 +60,11 @@ lsp.cssls
     })
 
 lsp.gopls
+    .setup({
+        capabilities = capabilities
+    })
+
+lsp.clangd
     .setup({
         capabilities = capabilities
     })
