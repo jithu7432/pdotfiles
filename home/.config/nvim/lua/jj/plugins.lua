@@ -8,24 +8,23 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    { 'L3MON4D3/LuaSnip' },
     { 'airblade/vim-rooter' },
     { 'gruvbox-community/gruvbox' },
-    { 'hrsh7th/cmp-buffer' },
-    { 'hrsh7th/cmp-cmdline' },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'hrsh7th/cmp-path' },
-    { 'hrsh7th/nvim-cmp' },
     { 'jiangmiao/auto-pairs' },
     { 'junegunn/vim-easy-align' },
     { 'justinmk/vim-sneak' },
     { 'lukas-reineke/indent-blankline.nvim' },
     { 'neovim/nvim-lspconfig' },
-    { 'nvim-telescope/telescope.nvim',      dependencies = { 'nvim-lua/plenary.nvim' } },
-    { 'nvim-treesitter/nvim-treesitter',    build = ':TSUpdate' },
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate'
+    },
     { 'preservim/nerdcommenter' },
     { 'rust-lang/rust.vim' },
-    { 'saadparwaiz1/cmp_luasnip' },
     { 'terryma/vim-multiple-cursors' },
     { 'tpope/vim-fugitive' },
     { 'vim-airline/vim-airline' },
@@ -37,8 +36,31 @@ local plugins = {
         "seblyng/roslyn.nvim",
         ft = "cs",
         opts = {}
-    }
+    },
+    {
+        'saghen/blink.cmp',
+        dependencies = { 'rafamadriz/friendly-snippets' },
 
+        version = '1.*',
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
+        opts = {
+            keymap = { preset = 'super-tab' },
+
+            appearance = {
+                nerd_font_variant = 'mono'
+            },
+
+            completion = { documentation = { auto_show = false } },
+
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+
+            fuzzy = { implementation = "rust" }
+        },
+        opts_extend = { "sources.default" }
+    }
 }
 
 require("lazy").setup(plugins, {})

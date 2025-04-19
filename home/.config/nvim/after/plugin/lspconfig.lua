@@ -1,35 +1,35 @@
 -- Set up nvim-cmp.
-local cmp = require('cmp')
-
-cmp.setup({
-    snippet = {
-        -- REQUIRED - you must specify a snippet engine
-        expand = function(args)
-            -- vim.fn["vsnip#anonymous"](args.body)
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        end,
-    },
-    mapping = cmp.mapping.preset.insert({
-        ['<TAB>'] = cmp.mapping.confirm({ select = true }),
-    }),
-
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        -- { name = 'vsnip' },
-        -- { name = 'luasnip' },
-    }, {
-        { name = 'buffer' },
-    })
-})
-
-
--- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline({ '/', '?' }, {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-        { name = 'buffer' }
-    }
-})
+-- local cmp = require('cmp')
+--
+-- cmp.setup({
+--     snippet = {
+--         -- REQUIRED - you must specify a snippet engine
+--         expand = function(args)
+--             -- vim.fn["vsnip#anonymous"](args.body)
+--             require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+--         end,
+--     },
+--     mapping = cmp.mapping.preset.insert({
+--         ['<TAB>'] = cmp.mapping.confirm({ select = true }),
+--     }),
+--
+--     sources = cmp.config.sources({
+--         { name = 'nvim_lsp' },
+--         -- { name = 'vsnip' },
+--         -- { name = 'luasnip' },
+--     }, {
+--         { name = 'buffer' },
+--     })
+-- })
+--
+--
+-- -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+-- cmp.setup.cmdline({ '/', '?' }, {
+--     mapping = cmp.mapping.preset.cmdline(),
+--     sources = {
+--         { name = 'buffer' }
+--     }
+-- })
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', 'gn', vim.diagnostic.goto_next)
