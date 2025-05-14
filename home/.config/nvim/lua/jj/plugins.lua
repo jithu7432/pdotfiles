@@ -7,6 +7,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+
 local plugins = {
     { 'airblade/vim-rooter' },
     { 'gruvbox-community/gruvbox' },
@@ -38,7 +39,20 @@ local plugins = {
     {
         "seblyng/roslyn.nvim",
         ft = "cs",
-        opts = {}
+        ---@module 'roslyn.config'
+        ---@type RoslynNvimConfig
+        opts = {
+            config = {
+                cmd = {
+                    "dotnet",
+                    vim.fs.joinpath(vim.fn.stdpath("data"), "roslyn", "Microsoft.CodeAnalysis.LanguageServer.dll"),
+                    "--logLevel=Information",
+                    "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.get_log_path()),
+                    "--stdio",
+                },
+
+            }
+        }
     },
     {
         'saghen/blink.cmp',
