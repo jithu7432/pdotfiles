@@ -69,3 +69,8 @@ lsp.clangd
         capabilities = capabilities
     })
 
+lsp.lemminx
+    .setup({
+        capabilities = capabilities
+    })
+
