@@ -1,5 +1,5 @@
-vim.keymap.set('n', 'gn', vim.diagnostic.goto_next)
-vim.keymap.set('n', 'gp', vim.diagnostic.goto_prev)
+vim.keymap.set('n', 'gn', function() vim.diagnostic.jump({ count = 1 }) end)
+vim.keymap.set('n', 'gp', function() vim.diagnostic.jump({ count = -1 }) end)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -33,4 +33,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
             end,
             opts)
     end,
+})
+
+vim.diagnostic.config({
+    underline = true,
+    virtual_lines = {
+        severity = { "WARN", "ERROR" },
+    }
 })
