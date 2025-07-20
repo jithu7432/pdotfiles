@@ -37,7 +37,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 vim.diagnostic.config({
     underline = true,
-    virtual_lines = {
+    virtual_text = {
         severity = { "WARN", "ERROR" },
     }
 })
