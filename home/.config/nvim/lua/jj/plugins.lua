@@ -16,26 +16,15 @@ local plugins = {
     { 'justinmk/vim-sneak' },
     { 'lukas-reineke/indent-blankline.nvim' },
     { 'neovim/nvim-lspconfig' },
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            "nvim-telescope/telescope-live-grep-args.nvim",
-        }
-    },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate'
-    },
+    { 'nvim-telescope/telescope.nvim',      dependencies = { 'nvim-lua/plenary.nvim', "nvim-telescope/telescope-live-grep-args.nvim", } },
+    { 'nvim-treesitter/nvim-treesitter',    build = ':TSUpdate' },
+    { 'nvimtools/none-ls.nvim' },
     { 'preservim/nerdcommenter' },
-    { 'rust-lang/rust.vim' },
     { 'terryma/vim-multiple-cursors' },
     { 'tpope/vim-fugitive' },
     { 'vim-airline/vim-airline' },
     { 'windwp/nvim-autopairs' },
     { 'windwp/nvim-ts-autotag' },
-    { 'nvimtools/none-ls.nvim' },
-    { 'NStefan002/screenkey.nvim' },
     {
         "seblyng/roslyn.nvim",
         ft = "cs",
@@ -47,7 +36,7 @@ local plugins = {
                     "dotnet",
                     vim.fs.joinpath(vim.fn.stdpath("data"), "roslyn", "Microsoft.CodeAnalysis.LanguageServer.dll"),
                     "--logLevel=Information",
-                    "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.get_log_path()),
+                    "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.log.get_filename()),
                     "--stdio",
                 },
 
@@ -57,23 +46,14 @@ local plugins = {
     {
         'saghen/blink.cmp',
         dependencies = { 'rafamadriz/friendly-snippets' },
-
         version = '1.*',
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
         opts = {
             keymap = { preset = 'super-tab' },
-
-            appearance = {
-                nerd_font_variant = 'mono'
-            },
-
+            appearance = { nerd_font_variant = 'mono' },
             completion = { documentation = { auto_show = false } },
-
-            sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
-            },
-
+            sources = { default = { 'lsp', 'path', 'snippets', 'buffer' }, },
             fuzzy = { implementation = "rust" }
         },
         opts_extend = { "sources.default" }
