@@ -4,7 +4,6 @@ vim.lsp.enable('digestif')
 vim.lsp.enable('gopls')
 vim.lsp.enable('gradle_ls')
 vim.lsp.enable('jsonls')
-vim.lsp.enable('kotlin_lsp');
 vim.lsp.enable('lemminx')
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('neocmake')
@@ -12,3 +11,5 @@ vim.lsp.enable('pylsp')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('taplo')
 vim.lsp.enable('ts_ls')
+vim.lsp.enable('kotlin-lsp');
+

@@ -10,7 +10,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     { 'airblade/vim-rooter' },
-    { 'gruvbox-community/gruvbox' },
+    { 'sainnhe/gruvbox-material' },
     { 'jiangmiao/auto-pairs' },
     { 'junegunn/vim-easy-align' },
     { 'justinmk/vim-sneak' },
@@ -22,7 +22,8 @@ local plugins = {
     { 'preservim/nerdcommenter' },
     { 'terryma/vim-multiple-cursors' },
     { 'tpope/vim-fugitive' },
-    { 'vim-airline/vim-airline' },
+    { 'vim-airline/vim-airline',            dependencies = { 'vim-airline/vim-airline-themes' } },
+
     { 'windwp/nvim-autopairs' },
     { 'windwp/nvim-ts-autotag' },
     {

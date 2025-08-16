@@ -35,9 +35,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end,
 })
 
+local severity = vim.diagnostic.severity;
 vim.diagnostic.config({
     underline = true,
     virtual_text = {
-        severity = { vim.diagnostic.severity.WARN, vim.diagnostic.severity.ERROR },
+        severity = {
+            severity.ERROR,
+            severity.WARN,
+            severity.INFO,
+            severity.HINT,
+        },
     }
 })
