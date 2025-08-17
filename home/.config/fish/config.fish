@@ -13,6 +13,7 @@ if status is-interactive
         set -U FZF_DEFAULT_COMMAND fd
         set -U DOTNET_ROOT ~/.dotnet
         set -U DOTNET_CLI_TELEMETRY_OPTOUT 1
+        set -U ANDROID_HOME ~/tools/android-sdk/
 
         set LC_ALL en_IN.UTF-8
         set LANG en_IN.UTF-8
