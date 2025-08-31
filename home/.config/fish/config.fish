@@ -10,11 +10,11 @@ if status is-interactive
         fish_vi_key_bindings
         starship init fish | source 
 
-        set -U FZF_DISABLE_KEYBINDINGS 1
-        set -U FZF_DEFAULT_COMMAND fd
-        set -U DOTNET_ROOT ~/.dotnet
-        set -U DOTNET_CLI_TELEMETRY_OPTOUT 1
-        set -U ANDROID_HOME ~/tools/android-sdk/
+        set -x FZF_DISABLE_KEYBINDINGS 1
+        set -x FZF_DEFAULT_COMMAND fd
+        set -x DOTNET_ROOT ~/.dotnet
+        set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
+        set -x ANDROID_HOME ~/tools/android-sdk/
 
         set LC_ALL en_IN.UTF-8
         set LANG en_IN.UTF-8
