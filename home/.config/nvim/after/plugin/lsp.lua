@@ -1,4 +1,3 @@
-vim.lsp.enable('bashls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('digestif')
 vim.lsp.enable('gopls')
@@ -12,3 +11,7 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('taplo')
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('kotlin_lsp');
+
+if vim.fn.has 'win32' ~= 1 then
+    vim.lsp.enable('bashls')
+end
