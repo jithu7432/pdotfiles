@@ -18,7 +18,7 @@ alias vim=nvim
 alias vimg='vim +G'
 alias webp2gif='magick mogrify -format gif *.webp && rm *.webp'
 
-alias yy='sudo apt update -y && sudo apt upgrade -y'
+alias yy='sudo apt update -y && sudo apt list --upgradable &&sudo apt upgrade -y'
 alias tt=tmux
 
 function ff

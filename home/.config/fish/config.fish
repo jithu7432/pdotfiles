@@ -4,6 +4,7 @@ if status is-interactive
         set -gx EDITOR /usr/bin/nvim
 
         set fish_greeting
+        set -U fish_color_command 88C0D0
         set -U fish_user_paths ~/.local/bin $fish_user_paths
 
         fish_vi_key_bindings
