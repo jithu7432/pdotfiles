@@ -1,23 +1,25 @@
 if status is-interactive
         source ~/.config/fish/aliases.fish
-        
-        set -gx EDITOR /usr/bin/nvim
 
         set fish_greeting
         set -U fish_color_command 88C0D0
-        set -U fish_user_paths ~/.local/bin $fish_user_paths
-
         fish_vi_key_bindings
-        starship init fish | source 
+        bind -M visual ctrl-r history-pager
+        bind -M normal ctrl-r history-pager        
+        bind -M insert ctrl-r history-pager
 
-        set -x FZF_DISABLE_KEYBINDINGS 1
-        set -x FZF_DEFAULT_COMMAND fd
-        set -x DOTNET_ROOT ~/.dotnet
-        set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
-        set -x ANDROID_HOME ~/tools/android-sdk/
+        starship init fish | source
 
-        set LC_ALL en_IN.UTF-8
-        set LANG en_IN.UTF-8
+        set -gx fish_user_paths ~/.local/bin $fish_user_paths
+        set -gx ANDROID_HOME ~/tools/android-sdk/
+        set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
+        set -gx DOTNET_ROOT ~/.dotnet
+        set -gx EDITOR /usr/bin/nvim
+        set -gx FZF_DEFAULT_COMMAND fd
+        set -gx FZF_DISABLE_KEYBINDINGS 1
+        set -gx LANG en_IN.UTF-8
+        set -gx LC_ALL en_IN.UTF-8
+        set -gx LC_CTYPE en_US.UTF-8
 
         set PATH "$HOME/.cargo/bin/:$PATH"
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
@@ -26,4 +28,5 @@ if status is-interactive
 
         direnv hook fish | source
         set -g direnv_fish_mode eval_on_arrow
+        /usr/bin/setxkbmap -option caps:swapescape
 end
