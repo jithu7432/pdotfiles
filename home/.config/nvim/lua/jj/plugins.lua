@@ -27,24 +27,6 @@ local plugins = {
     { 'windwp/nvim-autopairs' },
     { 'windwp/nvim-ts-autotag' },
     {
-        "seblyng/roslyn.nvim",
-        ft = "cs",
-        ---@module 'roslyn.config'
-        ---@type RoslynNvimConfig
-        opts = {
-            config = {
-                cmd = {
-                    "dotnet",
-                    vim.fs.joinpath(vim.fn.stdpath("data"), "roslyn", "Microsoft.CodeAnalysis.LanguageServer.dll"),
-                    "--logLevel=Information",
-                    "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.log.get_filename()),
-                    "--stdio",
-                },
-
-            }
-        }
-    },
-    {
         'saghen/blink.cmp',
         dependencies = { 'rafamadriz/friendly-snippets' },
         version = '1.*',
