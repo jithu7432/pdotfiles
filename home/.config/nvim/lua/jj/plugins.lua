@@ -18,7 +18,7 @@ local plugins = {
     { 'neovim/nvim-lspconfig' },
     { 'nvim-telescope/telescope.nvim',      dependencies = { 'nvim-lua/plenary.nvim', "nvim-telescope/telescope-live-grep-args.nvim", } },
     { 'nvim-treesitter/nvim-treesitter',    build = ':TSUpdate' },
-    { 'nvimtools/none-ls.nvim' },
+    { 'nvimtools/none-ls.nvim',             dependencies = { 'nvimtools/none-ls-extras.nvim' } },
     { 'preservim/nerdcommenter' },
     { 'terryma/vim-multiple-cursors' },
     { 'tpope/vim-fugitive' },
