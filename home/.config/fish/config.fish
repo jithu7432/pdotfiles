@@ -8,7 +8,6 @@ if status is-interactive
         bind -M normal ctrl-r history-pager        
         bind -M insert ctrl-r history-pager
 
-        starship init fish | source
 
         set -gx fish_user_paths ~/.local/bin $fish_user_paths
         set -gx ANDROID_HOME ~/tools/android-sdk/
@@ -27,7 +26,11 @@ if status is-interactive
         set PATH "$HOME/tools/roslyn/:$PATH"
         set PATH "/usr/local/go/bin:$PATH"
 
+        starship init fish | source
         direnv hook fish | source
         set -g direnv_fish_mode eval_on_arrow
-        /usr/bin/setxkbmap -option caps:swapescape
+
+        if set -q DISPLAY
+            /usr/bin/setxkbmap -option caps:swapescape
+        end
 end
