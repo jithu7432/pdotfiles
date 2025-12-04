@@ -1,10 +1,15 @@
-vim.keymap.set('n', 'gn', function() vim.diagnostic.jump({ count = 1 }) end)
-vim.keymap.set('n', 'gp', function() vim.diagnostic.jump({ count = -1 }) end)
+vim.keymap.set('n', 'gn', function()
+    vim.diagnostic.jump({ count = 1 })
+end)
+vim.keymap.set('n', 'gp', function()
+    vim.diagnostic.jump({ count = -1 })
+end)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
+local user_group = vim.api.nvim_create_augroup('UserLspConfig', { clear = true });
 vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+    group = user_group,
     callback = function(ev)
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
@@ -29,9 +34,18 @@ vim.api.nvim_create_autocmd('LspAttach', {
             opts)
         vim.keymap.set('n', '<leader>f',
             function()
-                vim.lsp.buf.format { async = true }
+                vim.lsp.buf.format { async = false }
             end,
             opts)
+
+        vim.api.nvim_clear_autocmds({ group = user_group, buffer = ev.buf })
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            group = user_group,
+            buffer = ev.buf,
+            callback = function()
+                vim.lsp.buf.format({ async = false })
+            end
+        })
     end,
 })
 
