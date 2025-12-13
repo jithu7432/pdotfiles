@@ -22,5 +22,5 @@ alias yy='sudo apt update -y && sudo apt list --upgradable &&sudo apt upgrade -y
 alias tt=tmux
 
 function ff
-    cd $(FZF_DEFAULT_COMMAND='fdfind -td' fzf)
+    cd $(FZF_DEFAULT_COMMAND='fd -td' fzf)
 end

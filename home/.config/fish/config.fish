@@ -3,6 +3,7 @@ if status is-interactive
 
         set fish_greeting
         set -U fish_color_command 88C0D0
+
         fish_vi_key_bindings
         bind -M visual ctrl-r history-pager
         bind -M normal ctrl-r history-pager        
@@ -24,13 +25,14 @@ if status is-interactive
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
         set PATH "$HOME/.node/bin/:$PATH"
         set PATH "$HOME/tools/roslyn/:$PATH"
+        set PATH "$HOME/tools/nodejs/bin/:$PATH"
         set PATH "/usr/local/go/bin:$PATH"
 
-        starship init fish | source
-        direnv hook fish | source
-        set -g direnv_fish_mode eval_on_arrow
-
+        if test -e direnv
+            direnv hook fish | source
+            set -g direnv_fish_mode eval_on_arrow
+        end
         if set -q DISPLAY
-            /usr/bin/setxkbmap -option caps:swapescape
+            setxkbmap -option caps:swapescape
         end
 end

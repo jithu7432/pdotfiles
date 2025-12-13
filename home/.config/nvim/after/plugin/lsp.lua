@@ -9,7 +9,7 @@ vim.lsp.enable('neocmake')
 vim.lsp.enable('zuban')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('taplo')
-vim.lsp.enable('ts_ls')
+vim.lsp.enable('tsgo')
 vim.lsp.enable('kotlin_lsp');
 vim.lsp.enable('roslyn_ls');
 
