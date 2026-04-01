@@ -12,6 +12,7 @@ vim.lsp.enable('taplo')
 vim.lsp.enable('tsgo')
 vim.lsp.enable('kotlin_lsp');
 vim.lsp.enable('roslyn_ls');
+vim.lsp.enable('tailwindcss');
 
 if vim.fn.has 'win32' ~= 1 then
     vim.lsp.enable('bashls')
