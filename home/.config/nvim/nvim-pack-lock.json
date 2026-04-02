@@ -6,7 +6,8 @@
     },
     "blink.cmp": {
       "rev": "1eebbba1baa56946e7c031111d88a72f945381f5",
-      "src": "https://github.com/saghen/blink.cmp"
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": ">=0.0.0"
     },
     "gruvbox-material": {
       "rev": "790afe9dd085aa04eccd1da3626c5fa05c620e53",
