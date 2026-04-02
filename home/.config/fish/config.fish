@@ -26,7 +26,7 @@ if status is-interactive
         set PATH "$HOME/.node/bin/:$PATH"
         set PATH "$HOME/tools/roslyn/:$PATH"
         set PATH "$HOME/tools/nodejs/bin/:$PATH"
-        set PATH "/usr/local/go/bin:$PATH"
+        set PATH "$HOME/tools/netcoredbg/:$PATH"
 
         if test -e direnv
             direnv hook fish | source
