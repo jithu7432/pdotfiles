@@ -10,3 +10,5 @@ completions/
 conf.d/
 fish_plugins
 functions/
+
+nvim-pack-lock.json
