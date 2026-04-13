@@ -24,6 +24,7 @@ if status is-interactive
         set PATH "$HOME/.cargo/bin/:$PATH"
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
         set PATH "$HOME/.node/bin/:$PATH"
+        set PATH "$HOME/.yarn/bin/:$PATH"
         set PATH "$HOME/tools/roslyn/:$PATH"
         set PATH "$HOME/tools/nodejs/bin/:$PATH"
         set PATH "$HOME/tools/netcoredbg/:$PATH"
