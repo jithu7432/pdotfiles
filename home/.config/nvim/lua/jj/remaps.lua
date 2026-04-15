@@ -19,3 +19,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set({ mode = "n", noremap = true }, "<S-Tab>", "<<")
 vim.keymap.set({ mode = "i", noremap = true }, "<S-Tab>", "C-d")
+
+vim.api.nvim_create_user_command("LspLog", function()
+	vim.cmd(string.format("tabnew %s", vim.lsp.log.get_filename()))
+end, {
+	desc = "Opens the Nvim LSP client log.",
+})
