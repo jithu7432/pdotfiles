@@ -7,6 +7,6 @@ dap.adapters.gdb = {
 
 dap.adapters.coreclr = {
 	type = "executable",
-	command = "/home/user/tools/netcoredbg/netcoredbg",
+	command = "netcoredbg",
 	args = { "--interpreter=vscode" },
 }

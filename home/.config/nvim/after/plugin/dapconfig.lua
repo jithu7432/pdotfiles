@@ -26,5 +26,5 @@ vim.keymap.set("n", "<F11>", dap.step_into)
 vim.keymap.set("n", "<F12>", dap.step_out)
 
 vim.keymap.set("n", "<leader>d", function()
-	dapui.close()
+	dapui.toggle()
 end)
