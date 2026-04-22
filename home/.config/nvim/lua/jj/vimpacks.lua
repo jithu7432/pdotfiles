@@ -18,7 +18,7 @@ vim.pack.add({
 	{ src = "https://github.com/terryma/vim-multiple-cursors" },
 	{ src = "https://github.com/tpope/vim-fugitive" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
-	{ src = "https://github.com/saghen/blink.cmp" },
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
 	{ src = "https://github.com/mfussenegger/nvim-dap" },
 	{ src = "https://github.com/rcarriga/nvim-dap-ui" },
 	{ src = "https://github.com/nvim-neotest/nvim-nio" },
