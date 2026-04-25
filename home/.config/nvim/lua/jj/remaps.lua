@@ -25,3 +25,11 @@ vim.api.nvim_create_user_command("LspLog", function()
 end, {
 	desc = "Opens the Nvim LSP client log.",
 })
+
+vim.keymap.set({ "n", "v" }, "<C-/>", function()
+	vim.cmd.norm("gcc")
+end)
+
+vim.keymap.set({ "n", "v" }, "<C-_>", function()
+	vim.cmd.norm("gcc")
+end)
