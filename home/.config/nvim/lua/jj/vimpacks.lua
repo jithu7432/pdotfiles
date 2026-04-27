@@ -14,7 +14,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvimtools/none-ls.nvim" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/windwp/nvim-ts-autotag" },
-	{ src = "https://github.com/terryma/vim-multiple-cursors" },
+	{ src = "https://github.com/jake-stewart/multicursor.nvim" },
 	{ src = "https://github.com/tpope/vim-fugitive" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
