@@ -14,6 +14,7 @@ vim.lsp.enable('kotlin_lsp');
 vim.lsp.enable('roslyn_ls');
 vim.lsp.enable('yamlls');
 vim.lsp.enable('tailwindcss');
+vim.lsp.enable('html');
 
 if vim.fn.has 'win32' ~= 1 then
     vim.lsp.enable('bashls')
