@@ -33,7 +33,7 @@ if status is-interactive
             direnv hook fish | source
             set -g direnv_fish_mode eval_on_arrow
         end
-        if set -q DISPLAY
+        if type -q setxkbmap; and set -q DISPLAY
             setxkbmap -option caps:swapescape
         end
 end
