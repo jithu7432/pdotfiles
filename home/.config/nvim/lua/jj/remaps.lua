@@ -33,3 +33,5 @@ end)
 vim.keymap.set({ "n", "v" }, "<C-_>", function()
 	vim.cmd.norm("gcc")
 end)
+
+vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]])
