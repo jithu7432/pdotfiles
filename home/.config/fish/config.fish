@@ -17,8 +17,8 @@ if status is-interactive
         set -gx EDITOR /usr/bin/nvim
         set -gx FZF_DEFAULT_COMMAND fd
         set -gx FZF_DISABLE_KEYBINDINGS 1
-        set -gx LANG en_IN.UTF-8
-        set -gx LC_ALL en_IN.UTF-8
+        set -gx LANG en_US.UTF-8
+        set -gx LC_ALL en_US.UTF-8
         set -gx LC_CTYPE en_US.UTF-8
 
         set PATH "$HOME/.cargo/bin/:$PATH"
