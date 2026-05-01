@@ -18,9 +18,21 @@ alias vim=nvim
 alias vimg='vim +G'
 alias webp2gif='magick mogrify -format gif *.webp && rm *.webp'
 
-alias yy='sudo apt update -y && sudo apt list --upgradable &&sudo apt upgrade -y'
 alias tt=tmux
 
 function ff
     cd $(FZF_DEFAULT_COMMAND='fd -td' fzf)
 end
+
+function yy
+    if command -v apt >/dev/null 2>&1
+        sudo apt update -y
+        sudo apt list --upgradable
+        sudo apt upgrade -y
+    else if command -v pacman >/dev/null 2>&1
+        sudo pacman -Syu --noconfirm
+    else
+        return 1
+    end
+end
+
