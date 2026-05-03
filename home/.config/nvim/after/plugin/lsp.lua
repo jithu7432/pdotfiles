@@ -2,7 +2,6 @@ vim.lsp.enable('clangd')
 vim.lsp.enable('digestif')
 vim.lsp.enable('gopls')
 vim.lsp.enable('gradle_ls')
-vim.lsp.enable('jsonls')
 vim.lsp.enable('lemminx')
 vim.lsp.enable('stylua')
 vim.lsp.enable('neocmake')
@@ -19,3 +18,10 @@ vim.lsp.enable('html');
 if vim.fn.has 'win32' ~= 1 then
     vim.lsp.enable('bashls')
 end
+
+vim.lsp.config('jsonls', {
+  init_options = {
+    provideFormatter = false,
+  },
+})
+vim.lsp.enable('jsonls')
