@@ -20,6 +20,7 @@ if status is-interactive
         set -gx LANG en_US.UTF-8
         set -gx LC_ALL en_US.UTF-8
         set -gx LC_CTYPE en_US.UTF-8
+        set -g __fish_git_prompt_showdirtystate 1
 
         set PATH "$HOME/.cargo/bin/:$PATH"
         set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
