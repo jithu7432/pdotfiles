@@ -13,7 +13,6 @@ if status is-interactive
         set -gx fish_user_paths ~/.local/bin $fish_user_paths
         set -gx ANDROID_HOME ~/tools/android-sdk/
         set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
-        set -gx DOTNET_ROOT ~/.dotnet
         set -gx EDITOR /usr/bin/nvim
         set -gx FZF_DEFAULT_COMMAND fd
         set -gx FZF_DISABLE_KEYBINDINGS 1
