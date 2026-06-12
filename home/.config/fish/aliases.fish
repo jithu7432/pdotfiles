@@ -29,6 +29,8 @@ function yy
         sudo apt update -y
         sudo apt list --upgradable
         sudo apt upgrade -y
+    else if command -v yay >/dev/null 2>&1
+        yay -Syu --noconfirm
     else if command -v pacman >/dev/null 2>&1
         sudo pacman -Syu --noconfirm
     else
