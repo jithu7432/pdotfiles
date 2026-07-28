@@ -24,4 +24,8 @@ vim.pack.add({
 	{ src = "https://github.com/theHamsta/nvim-dap-virtual-text" },
 	{ src = "https://github.com/folke/snacks.nvim" },
 	{ src = "https://github.com/coder/claudecode.nvim" },
+	{ src = "https://github.com/tpope/vim-dadbod" },
+	{ src = "https://github.com/tpope/vim-dadbod" },
+	{ src = "https://github.com/kristijanhusak/vim-dadbod-ui" },
+	{ src = "https://github.com/kristijanhusak/vim-dadbod-completion" },
 })

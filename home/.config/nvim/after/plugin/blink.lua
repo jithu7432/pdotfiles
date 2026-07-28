@@ -7,6 +7,12 @@ require("blink.cmp").setup({
 	completion = { documentation = { auto_show = false } },
 	sources = {
 		default = { "lsp", "path", "buffer" },
+		per_filetype = {
+			sql = { "dadbod", "buffer" },
+		},
+		providers = {
+			dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+		},
 	},
 	fuzzy = {
 		implementation = "rust",
