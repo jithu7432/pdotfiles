@@ -33,13 +33,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 
 		vim.api.nvim_clear_autocmds({ group = user_group, buffer = ev.buf })
-		-- vim.api.nvim_create_autocmd("BufWritePre", {
-		--     group = user_group,
-		--     buffer = ev.buf,
-		--     callback = function()
-		--         vim.lsp.buf.format({ async = false })
-		--     end,
-		-- })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+		    group = user_group,
+
+		    buffer = ev.buf,
+		    callback = function()
+		        vim.lsp.buf.format({ async = false })
+		    end,
+		})
 	end,
 })
 
