@@ -9,7 +9,6 @@ vim.lsp.enable("zuban")
 vim.lsp.enable("rust_analyzer")
 vim.lsp.enable("taplo")
 vim.lsp.enable("tsgo")
-vim.lsp.enable("eslint")
 vim.lsp.enable("kotlin_lsp")
 vim.lsp.config("roslyn_ls", {
 	settings = {
