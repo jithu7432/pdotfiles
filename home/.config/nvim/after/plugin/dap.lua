@@ -7,7 +7,7 @@ dap.adapters.gdb = {
 
 dap.adapters.coreclr = {
 	type = "executable",
-	command = "netcoredbg",
+	command = "sharpdbg",
 	args = { "--interpreter=vscode" },
 }
 
