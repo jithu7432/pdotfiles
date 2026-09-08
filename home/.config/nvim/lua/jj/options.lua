@@ -30,7 +30,7 @@ vim.opt.colorcolumn = "150"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 250 })
+		vim.hl.hl_op({ higroup = "IncSearch", timeout = 250 })
 	end,
 })
 
