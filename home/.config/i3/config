@@ -36,6 +36,8 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec alacritty
 
+bindsym $mod+period exec --no-startup-id rofimoji --action clipboard
+
 # kill focused window
 bindsym $mod+z kill
 
