@@ -23,6 +23,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 		vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
 		vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, opts)
+		vim.keymap.set("n", "<space>q", vim.diagnostic.setqflist)
 		vim.keymap.set("v", "<space>ca", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 		vim.keymap.set("n", "<space>wl", function()
@@ -34,12 +35,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		vim.api.nvim_clear_autocmds({ group = user_group, buffer = ev.buf })
 		vim.api.nvim_create_autocmd("BufWritePre", {
-		    group = user_group,
+			group = user_group,
 
-		    buffer = ev.buf,
-		    callback = function()
-		        vim.lsp.buf.format({ async = false })
-		    end,
+			buffer = ev.buf,
+			callback = function()
+				vim.lsp.buf.format({ async = false })
+			end,
 		})
 	end,
 })
