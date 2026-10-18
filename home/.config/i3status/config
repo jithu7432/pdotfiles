@@ -11,6 +11,8 @@ general {
         interval = 5
 }
 
+order += "read_file CPU_EPP"
+order += "run_watch DHCP"
 order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -44,7 +46,7 @@ load {
 }
 
 memory {
-        format = "%used | %available"
+        format = "%used / %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
@@ -60,3 +62,13 @@ volume master {
         mixer = "Master"
         mixer_idx = 0
 }
+
+run_watch DHCP {
+    pidfile = "/var/run/dhclient*.pid"
+}
+
+read_file CPU_EPP {
+        path = "/sys/devices/system/cpu/cpu0/cpufreq/energy_performance_preference"
+        format = "%content"
+}
+
