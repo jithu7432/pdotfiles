@@ -5,35 +5,22 @@ if status is-interactive
         set -U fish_color_command 88C0D0
 
         fish_vi_key_bindings
+
         bind -M visual ctrl-r history-pager
         bind -M normal ctrl-r history-pager        
         bind -M insert ctrl-r history-pager
 
+        set -gx LANG en_US.UTF-8
+        set -gx LC_ALL en_US.UTF-8
+        set -gx LC_CTYPE en_US.UTF-8
 
-        set -gx fish_user_paths ~/.local/bin $fish_user_paths
-        set -gx ANDROID_HOME ~/tools/android-sdk/
         set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
         set -gx EDITOR /usr/bin/nvim
         set -gx FZF_DEFAULT_COMMAND fd
         set -gx FZF_DISABLE_KEYBINDINGS 1
-        set -gx LANG en_US.UTF-8
-        set -gx LC_ALL en_US.UTF-8
-        set -gx LC_CTYPE en_US.UTF-8
+
         set -g __fish_git_prompt_showdirtystate 1
 
-        set PATH "$HOME/.cargo/bin/:$PATH"
-        set PATH "$HOME/.dotnet:$HOME/.dotnet/tools:$PATH"
-        set PATH "$HOME/.node/bin/:$PATH"
-        set PATH "$HOME/.npm/bin/:$PATH"
-        set PATH "$HOME/.yarn/bin/:$PATH"
-        set PATH "$HOME/tools/roslyn/:$PATH"
-        set PATH "$HOME/tools/nodejs/bin/:$PATH"
-        set PATH "$HOME/tools/netcoredbg/:$PATH"
-
-        if test -e direnv
-            direnv hook fish | source
-            set -g direnv_fish_mode eval_on_arrow
-        end
         if type -q setxkbmap; and set -q DISPLAY
             setxkbmap -option caps:swapescape
         end
